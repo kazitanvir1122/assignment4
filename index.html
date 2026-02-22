@@ -2,10 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job application Tracker</title>
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet"href="style.css">
 </head>
 <body>
-    <h1>Tanvir</h1>
+<div class="container">
+<h1 class="title">Job Application Tracker</h1>
+
+    <!-- Dashboard -->
+    <div class="dashboard">
+        <div class="card">
+            <h2>Total</h2>
+            <p id="totalCount">8</p>
+        </div>
+        <div class="card">
+            <h2>Interview</h2>
+            <p id="interviewCount">0</p>
+        </div>
+        <div class="card">
+            <h2>Rejected</h2>
+            <p id="rejectedCount">0</p>
+        </div>
+    </div>
+<!-- Section Header -->
+<div class="section-header">
+        <h2>Available Jobs</h2>
+        <span id="sectionCount">8 jobs</span>
+    </div>
+<!-- Tabs -->
+ <div class="tabs">
+    <button onclick="switchTab('all')"class="tab active">All<button>
+        <button onclick="switchTab('interview')" class="tab">Interview</button>
+        <button onclick="switchTab('rejected')" class="tab">Rejected</button>
+    </div>
+<!-- Jobs -->
+<div id="jobsContainer" class="jobs"></div>
+<!-- Empty State -->
+<div id="emptyState" class="empty hidden">
+        <img src="jobs.png">
+        <h3>No jobs available</h3>
+        <p>Check back soon for new job opportunities.</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
